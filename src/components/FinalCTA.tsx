@@ -17,12 +17,12 @@ const FinalCTA = () => {
   return (
     <section className="section-padding bg-card relative">
       <div className="container-custom">
-        <div className="max-w-3xl mx-auto text-center px-4">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6">
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-3 sm:mb-4 md:mb-6">
             Pronto para dar o{" "}
             <span className="text-gradient-gold">próximo passo</span>?
           </h2>
-          <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-8 md:mb-12 max-w-2xl mx-auto">
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-muted-foreground mb-6 sm:mb-8 md:mb-12 max-w-2xl mx-auto">
             Fale agora com a Mamedio Veículos e encontre o carro ideal.
           </p>
 
@@ -30,7 +30,7 @@ const FinalCTA = () => {
             <Button
               variant="gold"
               size="xl"
-              className="group w-full sm:w-auto text-base sm:text-lg px-6 py-5 sm:px-8 sm:py-6"
+              className="group w-full sm:w-auto text-sm sm:text-base md:text-lg px-5 py-4 sm:px-6 sm:py-5 md:px-8 md:py-6"
               onClick={handleContact}
             >
               <Phone className="w-4 h-4 sm:w-5 sm:h-5" />
@@ -39,7 +39,7 @@ const FinalCTA = () => {
             <Button
               variant="goldOutline"
               size="xl"
-              className="group w-full sm:w-auto text-base sm:text-lg px-6 py-5 sm:px-8 sm:py-6"
+              className="group w-full sm:w-auto text-sm sm:text-base md:text-lg px-5 py-4 sm:px-6 sm:py-5 md:px-8 md:py-6"
               onClick={scrollToVehicles}
             >
               Ver veículos disponíveis

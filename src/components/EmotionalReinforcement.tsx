@@ -14,14 +14,14 @@ const EmotionalReinforcement = () => {
       </div>
 
       {/* Content */}
-      <div className="container-custom relative z-10 px-4">
+      <div className="container-custom relative z-10">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 leading-tight">
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-3 sm:mb-4 md:mb-6 leading-tight">
             Seu próximo carro não é apenas uma compra.
-            <br />
+            <br className="hidden sm:block" />
             <span className="text-gradient-gold">É uma conquista.</span>
           </h2>
-          <p className="text-base sm:text-lg md:text-xl text-foreground/90 font-medium">
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-foreground/90 font-medium">
             Mamedio Veículos
           </p>
         </div>

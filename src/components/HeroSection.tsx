@@ -56,7 +56,7 @@ const HeroSection = () => {
       </div>
 
       {/* Content */}
-      <div className="container-custom relative z-10 pt-20 sm:pt-24 pb-12 sm:pb-16 md:pt-20 md:pb-20 px-4">
+      <div className="container-custom relative z-10 pt-20 sm:pt-24 pb-10 sm:pb-12 md:pt-20 md:pb-20">
         <div className="max-w-4xl">
           {/* Logo Mamedio - Discreto */}
           <div 
@@ -74,7 +74,7 @@ const HeroSection = () => {
 
           {/* Main Headline */}
           <h1 
-            className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 md:mb-8 transition-all duration-700 delay-100 ${
+            className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-[1.2] sm:leading-tight mb-4 sm:mb-6 md:mb-8 transition-all duration-700 delay-100 ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
           >
@@ -86,7 +86,7 @@ const HeroSection = () => {
 
           {/* Subheadline */}
           <p 
-            className={`text-base sm:text-lg md:text-xl text-foreground/90 mb-8 md:mb-10 max-w-2xl transition-all duration-700 delay-200 ${
+            className={`text-sm sm:text-base md:text-lg lg:text-xl text-foreground/90 mb-6 sm:mb-8 md:mb-10 max-w-2xl transition-all duration-700 delay-200 ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
           >
@@ -95,20 +95,20 @@ const HeroSection = () => {
 
           {/* CTAs */}
           <div 
-            className={`flex flex-col sm:flex-row gap-3 sm:gap-4 mb-8 md:mb-10 transition-all duration-700 delay-300 ${
+            className={`flex flex-col sm:flex-row gap-3 sm:gap-4 mb-6 sm:mb-8 md:mb-10 transition-all duration-700 delay-300 ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
           >
             <Button
               variant="hero"
               size="xl"
-              className="group w-full sm:w-auto text-base sm:text-lg"
+              className="group w-full sm:w-auto text-sm sm:text-base md:text-lg px-6 py-5 sm:px-8 sm:py-6"
               onClick={scrollToVehicles}
             >
               Encontrar meu próximo carro
               <ArrowDown className="w-4 h-4 sm:w-5 sm:h-5 transition-transform group-hover:translate-y-1" />
             </Button>
-            <Button variant="heroSecondary" size="xl" className="w-full sm:w-auto text-base sm:text-lg">
+            <Button variant="heroSecondary" size="xl" className="w-full sm:w-auto text-sm sm:text-base md:text-lg px-6 py-5 sm:px-8 sm:py-6">
               Tirar dúvidas com um especialista
             </Button>
           </div>
