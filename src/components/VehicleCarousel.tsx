@@ -192,10 +192,10 @@ const VehicleCarousel = () => {
             className="w-full"
           >
             <CarouselContent className="-ml-2 md:-ml-4">
-              {vehiclesData.map((vehicle, index) => (
-                <CarouselItem key={vehicle.id} className="pl-2 md:pl-4 basis-full sm:basis-1/2 lg:basis-1/3">
-                  <div
-                    className="group relative bg-card rounded-2xl overflow-hidden border border-border hover:border-accent/50 transition-all duration-500 hover:shadow-elevated hover:-translate-y-2 transform-gpu h-full"
+                  {vehiclesData.map((vehicle, index) => (
+                    <CarouselItem key={vehicle.id} className="pl-2 md:pl-4 basis-full sm:basis-1/2 lg:basis-1/3">
+                      <div
+                        className="group relative bg-card rounded-xl sm:rounded-2xl overflow-hidden border border-border hover:border-accent/50 transition-all duration-500 hover:shadow-elevated hover:-translate-y-2 transform-gpu h-full"
                     style={{
                       transformStyle: "preserve-3d",
                     }}

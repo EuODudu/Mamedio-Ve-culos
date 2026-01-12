@@ -2,7 +2,7 @@ import heroImage from "@/assets/hero-car.jpg";
 
 const EmotionalReinforcement = () => {
   return (
-    <section className="relative min-h-[60vh] flex items-center overflow-hidden bg-gradient-hero">
+    <section className="relative min-h-[50vh] sm:min-h-[60vh] flex items-center overflow-hidden bg-gradient-hero py-12 sm:py-16 md:py-20">
       {/* Background Image */}
       <div className="absolute inset-0">
         <img

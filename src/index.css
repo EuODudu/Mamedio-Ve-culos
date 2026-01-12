@@ -38,8 +38,8 @@
     --muted: 220 10% 50%;
     --muted-foreground: 220 5% 75%;
 
-    /* Destructive */
-    --destructive: 0 84% 60%;
+    /* Destructive - Mudado para tom neutro */
+    --destructive: 220 30% 40%;
     --destructive-foreground: 0 0% 98%;
 
     /* Border & Input */
@@ -98,8 +98,8 @@
     --muted-foreground: 220 10% 65%;
     --accent: 45 90% 50%;
     --accent-foreground: 220 60% 10%;
-    --destructive: 0 62% 30%;
-    --destructive-foreground: 0 0% 98%;
+        --destructive: 220 25% 35%;
+        --destructive-foreground: 0 0% 98%;
     --border: 220 30% 25%;
     --input: 220 40% 20%;
     --ring: 45 90% 50%;

@@ -56,7 +56,7 @@ const HeroSection = () => {
       </div>
 
       {/* Content */}
-      <div className="container-custom relative z-10 pt-24 pb-16 md:pt-20 md:pb-20 px-4">
+      <div className="container-custom relative z-10 pt-20 sm:pt-24 pb-12 sm:pb-16 md:pt-20 md:pb-20 px-4">
         <div className="max-w-4xl">
           {/* Logo Mamedio - Discreto */}
           <div 
