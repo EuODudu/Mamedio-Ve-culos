@@ -169,15 +169,15 @@ const VehicleCarousel = () => {
     <section id="vehicles" ref={sectionRef} className="section-padding bg-background relative overflow-hidden">
       <div className="container-custom">
         {/* Section Header */}
-        <div className="text-center mb-12 animate-fade-up">
-          <span className="inline-block text-accent font-semibold text-sm uppercase tracking-wider mb-4">
+        <div className="text-center mb-8 md:mb-12 animate-fade-up px-4">
+          <span className="inline-block text-accent font-semibold text-xs sm:text-sm uppercase tracking-wider mb-3 md:mb-4">
             Nossa Seleção
           </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 md:mb-4">
             Veículos{" "}
             <span className="text-gradient-gold">selecionados</span>
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+          <p className="text-muted-foreground text-base sm:text-lg max-w-2xl mx-auto">
             Qualidade sobre quantidade. Veículos curados especialmente para você.
           </p>
         </div>
@@ -260,32 +260,32 @@ const VehicleCarousel = () => {
                     </div>
 
                     {/* Content */}
-                    <div className="p-6">
+                    <div className="p-4 md:p-6">
                       {/* Selo Mamedio */}
                       <div className="flex items-center gap-2 mb-2">
-                        <ShieldCheck className="w-4 h-4 text-accent" />
+                        <ShieldCheck className="w-3 h-3 md:w-4 md:h-4 text-accent" />
                         <p className="text-xs text-accent font-semibold uppercase tracking-wider">
                           Mamedio Veículos
                         </p>
                       </div>
 
                       {/* Name & Price */}
-                      <h3 className="text-xl font-bold mb-2 group-hover:text-accent transition-colors">
+                      <h3 className="text-lg md:text-xl font-bold mb-2 group-hover:text-accent transition-colors">
                         {vehicle.name}
                       </h3>
-                      <p className="text-2xl font-bold text-accent mb-4">
+                      <p className="text-xl md:text-2xl font-bold text-accent mb-3 md:mb-4">
                         {formatPrice(vehicle.price)}
                       </p>
 
                       {/* Quick Details */}
-                      <div className="flex flex-wrap gap-3 text-sm text-muted-foreground mb-6">
-                        <span className="px-3 py-1 bg-card rounded-full border border-border">
+                      <div className="flex flex-wrap gap-2 md:gap-3 text-xs md:text-sm text-muted-foreground mb-4 md:mb-6">
+                        <span className="px-2 py-1 md:px-3 md:py-1 bg-card rounded-full border border-border">
                           {vehicle.year}
                         </span>
-                        <span className="px-3 py-1 bg-card rounded-full border border-border">
+                        <span className="px-2 py-1 md:px-3 md:py-1 bg-card rounded-full border border-border">
                           {vehicle.fuel}
                         </span>
-                        <span className="px-3 py-1 bg-card rounded-full border border-border">
+                        <span className="px-2 py-1 md:px-3 md:py-1 bg-card rounded-full border border-border">
                           {vehicle.transmission}
                         </span>
                       </div>
@@ -293,11 +293,11 @@ const VehicleCarousel = () => {
                       {/* CTA */}
                       <Button
                         variant="gold"
-                        className="w-full group/btn"
+                        className="w-full group/btn text-sm md:text-base"
                         onClick={() => handleVehicleClick(vehicle)}
                       >
                         Ver detalhes
-                        <ArrowRight className="w-4 h-4 transition-transform group-hover/btn:translate-x-1" />
+                        <ArrowRight className="w-3 h-3 md:w-4 md:h-4 transition-transform group-hover/btn:translate-x-1" />
                       </Button>
                     </div>
                   </div>
@@ -310,10 +310,10 @@ const VehicleCarousel = () => {
         </div>
 
         {/* View All Button */}
-        <div className="text-center mt-12">
-          <Button variant="goldOutline" size="lg" className="group">
+        <div className="text-center mt-8 md:mt-12 px-4">
+          <Button variant="goldOutline" size="lg" className="group w-full sm:w-auto">
             Ver todos os veículos
-            <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+            <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 transition-transform group-hover:translate-x-1" />
           </Button>
         </div>
       </div>

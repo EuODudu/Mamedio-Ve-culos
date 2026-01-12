@@ -67,7 +67,7 @@ const StatsSection = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-8 md:py-12 lg:py-16 bg-card relative overflow-hidden">
+    <section ref={sectionRef} className="section-padding bg-card relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
@@ -87,10 +87,10 @@ const StatsSection = () => {
           </h2>
           
           {/* Destaque Principal */}
-          <div className="max-w-4xl mx-auto mb-8">
+          <div className="max-w-4xl mx-auto mb-8 px-4">
             <div className="relative inline-block w-full">
-              <div className="absolute -inset-4 bg-accent/10 rounded-2xl blur-xl"></div>
-              <p className="relative text-2xl md:text-3xl lg:text-4xl font-bold text-foreground px-8 py-6 bg-card/50 backdrop-blur-sm rounded-xl border border-accent/20 text-center">
+              <div className="absolute -inset-2 md:-inset-4 bg-accent/10 rounded-2xl blur-xl"></div>
+              <p className="relative text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-foreground px-4 py-4 md:px-8 md:py-6 bg-card/50 backdrop-blur-sm rounded-xl border border-accent/20 text-center">
                 Não prometemos.{" "}
                 <span className="text-gradient-gold relative">
                   Comprovamos com fatos.
@@ -101,47 +101,47 @@ const StatsSection = () => {
           </div>
 
           {/* Conteúdo Estruturado */}
-          <div className="max-w-5xl mx-auto space-y-6">
+          <div className="max-w-5xl mx-auto space-y-6 px-4">
             {/* Transparência em cada decisão */}
             <div className="text-left">
-              <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4 flex items-center gap-3">
-                <span className="w-1 h-12 bg-gradient-to-b from-accent to-accent/50 rounded-full flex-shrink-0"></span>
+              <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-foreground mb-3 md:mb-4 flex items-center gap-2 md:gap-3">
+                <span className="w-1 h-8 md:h-12 bg-gradient-to-b from-accent to-accent/50 rounded-full flex-shrink-0"></span>
                 <span>Transparência em cada decisão</span>
               </h3>
-              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed pl-5">
+              <p className="text-base sm:text-lg md:text-xl text-muted-foreground leading-relaxed pl-3 md:pl-5">
                 Cada número representa uma <span className="text-foreground font-semibold">escolha bem-feita</span>, um cliente atendido com <span className="text-foreground font-semibold">clareza</span> e uma conquista entregue com <span className="text-foreground font-semibold">total segurança</span>.
               </p>
             </div>
 
             {/* Processo que gera confiança */}
             <div className="text-left">
-              <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4 flex items-center gap-3">
-                <span className="w-1 h-12 bg-gradient-to-b from-accent to-accent/50 rounded-full flex-shrink-0"></span>
+              <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-foreground mb-3 md:mb-4 flex items-center gap-2 md:gap-3">
+                <span className="w-1 h-8 md:h-12 bg-gradient-to-b from-accent to-accent/50 rounded-full flex-shrink-0"></span>
                 <span>Processo que gera confiança</span>
               </h3>
-              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed pl-5">
+              <p className="text-base sm:text-lg md:text-xl text-muted-foreground leading-relaxed pl-3 md:pl-5">
                 Trabalhamos com <span className="text-foreground font-semibold">critérios rigorosos</span>, <span className="text-foreground font-semibold">processos bem definidos</span> e <span className="text-foreground font-semibold">controle em cada etapa</span>, para que você saiba exatamente o que está comprando.
               </p>
             </div>
 
             {/* Compromisso que vai além da venda */}
             <div className="text-left">
-              <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4 flex items-center gap-3">
-                <span className="w-1 h-12 bg-gradient-to-b from-accent to-accent/50 rounded-full flex-shrink-0"></span>
+              <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-foreground mb-3 md:mb-4 flex items-center gap-2 md:gap-3">
+                <span className="w-1 h-8 md:h-12 bg-gradient-to-b from-accent to-accent/50 rounded-full flex-shrink-0"></span>
                 <span>Compromisso que vai além da venda</span>
               </h3>
-              <div className="bg-background/50 backdrop-blur-sm rounded-xl p-6 border border-accent/20 pl-5">
-                <p className="text-lg md:text-xl text-foreground leading-relaxed">
+              <div className="bg-background/50 backdrop-blur-sm rounded-xl p-4 md:p-6 border border-accent/20 pl-3 md:pl-5">
+                <p className="text-base sm:text-lg md:text-xl text-foreground leading-relaxed">
                   Aqui, resultados não são apenas métricas. São reflexo de <span className="text-accent font-semibold">responsabilidade</span>, <span className="text-accent font-semibold">credibilidade</span> e <span className="text-accent font-semibold">respeito</span> em cada negociação realizada.
                 </p>
               </div>
             </div>
 
             {/* Mensagem Final */}
-            <div className="max-w-4xl mx-auto pt-8">
+            <div className="max-w-4xl mx-auto pt-6 md:pt-8">
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-r from-accent/20 via-accent/10 to-accent/20 rounded-2xl blur-2xl"></div>
-                <p className="relative text-xl md:text-2xl font-bold text-foreground px-8 py-6 bg-card/80 backdrop-blur-sm rounded-xl border border-accent/30 text-center leading-relaxed">
+                <p className="relative text-lg sm:text-xl md:text-2xl font-bold text-foreground px-4 py-4 md:px-8 md:py-6 bg-card/80 backdrop-blur-sm rounded-xl border border-accent/30 text-center leading-relaxed">
                   Porque quando o assunto é <span className="text-gradient-gold">conquistar o próximo carro</span>,
                   <br className="hidden md:block" />
                   nossos números assumem o <span className="text-gradient-gold">compromisso com você</span>.
@@ -151,7 +151,7 @@ const StatsSection = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-6 gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6">
           {stats.map((stat, index) => {
             const Icon = stat.icon;
             return (
@@ -160,14 +160,14 @@ const StatsSection = () => {
                 className="stat-item opacity-0 text-center group"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="bg-background rounded-xl p-6 border border-border hover:border-accent/50 transition-all duration-300 hover:shadow-card hover:-translate-y-1 h-full">
-                  <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-accent/10 flex items-center justify-center group-hover:bg-accent/20 transition-colors">
-                    <Icon className="w-6 h-6 text-accent" />
+                <div className="bg-background rounded-xl p-4 md:p-6 border border-border hover:border-accent/50 transition-all duration-300 hover:shadow-card hover:-translate-y-1 h-full">
+                  <div className="w-10 h-10 md:w-12 md:h-12 mx-auto mb-3 md:mb-4 rounded-full bg-accent/10 flex items-center justify-center group-hover:bg-accent/20 transition-colors">
+                    <Icon className="w-5 h-5 md:w-6 md:h-6 text-accent" />
                   </div>
-                  <div className="text-3xl md:text-4xl font-bold text-accent mb-2">
+                  <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-accent mb-2">
                     {isVisible ? stat.value : "0"}
                   </div>
-                  <p className="text-sm text-muted-foreground">{stat.label}</p>
+                  <p className="text-xs sm:text-sm text-muted-foreground leading-tight">{stat.label}</p>
                 </div>
               </div>
             );
