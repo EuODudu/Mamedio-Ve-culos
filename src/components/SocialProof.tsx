@@ -71,35 +71,35 @@ const SocialProof = () => {
   return (
     <section ref={sectionRef} className="section-padding bg-background relative">
       <div className="container-custom">
-        <div className="text-center mb-6 sm:mb-8 md:mb-12">
-          <span className="inline-block text-accent font-semibold text-[10px] sm:text-xs md:text-sm uppercase tracking-wider mb-2 sm:mb-3 md:mb-4">
+        <div className="text-center mb-12">
+          <span className="inline-block text-accent font-semibold text-sm uppercase tracking-wider mb-4">
             O que nossos clientes dizem
           </span>
-          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-2 sm:mb-3 md:mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
             Depoimentos{" "}
             <span className="text-gradient-gold">reais</span>
           </h2>
         </div>
 
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 md:gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {testimonials.map((testimonial, index) => (
               <div
                 key={index}
-                className="testimonial-item opacity-0 bg-card rounded-lg sm:rounded-xl p-4 sm:p-5 md:p-6 border border-border hover:border-accent/50 transition-all duration-300 hover:shadow-card hover:-translate-y-1"
+                className="testimonial-item opacity-0 bg-card rounded-xl p-6 border border-border hover:border-accent/50 transition-all duration-300 hover:shadow-card hover:-translate-y-1"
               >
-                <div className="flex items-center gap-1 mb-2 sm:mb-3 md:mb-4">
+                <div className="flex items-center gap-1 mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-2.5 h-2.5 sm:w-3 sm:h-3 md:w-4 md:h-4 text-accent fill-accent" />
+                    <Star key={i} className="w-4 h-4 text-accent fill-accent" />
                   ))}
                 </div>
-                <Quote className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 text-accent/30 mb-2 sm:mb-3 md:mb-4" />
-                <p className="text-xs sm:text-sm md:text-base text-foreground mb-2 sm:mb-3 md:mb-4 leading-relaxed font-medium">
+                <Quote className="w-8 h-8 text-accent/30 mb-4" />
+                <p className="text-foreground mb-4 leading-relaxed font-medium">
                   "{testimonial.text}"
                 </p>
-                <div className="pt-2 sm:pt-3 md:pt-4 border-t border-border">
-                  <p className="text-[10px] sm:text-xs md:text-sm font-semibold text-foreground">{testimonial.author}</p>
-                  <p className="text-[10px] sm:text-xs text-muted-foreground">{testimonial.location}</p>
+                <div className="pt-4 border-t border-border">
+                  <p className="text-sm font-semibold text-foreground">{testimonial.author}</p>
+                  <p className="text-xs text-muted-foreground">{testimonial.location}</p>
                 </div>
               </div>
             ))}
