@@ -169,15 +169,15 @@ const VehicleCarousel = () => {
     <section id="vehicles" ref={sectionRef} className="section-padding bg-background relative overflow-hidden">
       <div className="container-custom">
         {/* Section Header */}
-        <div className="text-center mb-12 animate-fade-up">
-          <span className="inline-block text-accent font-semibold text-sm uppercase tracking-wider mb-4">
+        <div className="text-center mb-8 md:mb-12 animate-fade-up px-4">
+          <span className="inline-block text-accent font-semibold text-xs sm:text-sm uppercase tracking-wider mb-3 md:mb-4">
             Nossa Seleção
           </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 md:mb-4">
             Veículos{" "}
             <span className="text-gradient-gold">selecionados</span>
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+          <p className="text-muted-foreground text-base sm:text-lg max-w-2xl mx-auto">
             Qualidade sobre quantidade. Veículos curados especialmente para você.
           </p>
         </div>
@@ -193,25 +193,29 @@ const VehicleCarousel = () => {
           >
             <CarouselContent className="-ml-2 md:-ml-4">
               {vehiclesData.map((vehicle, index) => (
-                <CarouselItem key={vehicle.id} className="pl-2 md:pl-4 basis-full md:basis-1/2 lg:basis-1/3">
+                <CarouselItem key={vehicle.id} className="pl-2 md:pl-4 basis-full sm:basis-1/2 lg:basis-1/3">
                   <div
                     className="group relative bg-card rounded-2xl overflow-hidden border border-border hover:border-accent/50 transition-all duration-500 hover:shadow-elevated hover:-translate-y-2 transform-gpu h-full"
                     style={{
                       transformStyle: "preserve-3d",
                     }}
                     onMouseMove={(e) => {
-                      const card = e.currentTarget;
-                      const rect = card.getBoundingClientRect();
-                      const x = e.clientX - rect.left;
-                      const y = e.clientY - rect.top;
-                      const centerX = rect.width / 2;
-                      const centerY = rect.height / 2;
-                      const rotateX = (y - centerY) / 15;
-                      const rotateY = (centerX - x) / 15;
-                      card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-8px)`;
+                      if (window.innerWidth >= 768) {
+                        const card = e.currentTarget;
+                        const rect = card.getBoundingClientRect();
+                        const x = e.clientX - rect.left;
+                        const y = e.clientY - rect.top;
+                        const centerX = rect.width / 2;
+                        const centerY = rect.height / 2;
+                        const rotateX = (y - centerY) / 15;
+                        const rotateY = (centerX - x) / 15;
+                        card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-8px)`;
+                      }
                     }}
                     onMouseLeave={(e) => {
-                      e.currentTarget.style.transform = "perspective(1000px) rotateX(0) rotateY(0) translateY(0)";
+                      if (window.innerWidth >= 768) {
+                        e.currentTarget.style.transform = "perspective(1000px) rotateX(0) rotateY(0) translateY(0)";
+                      }
                     }}
                   >
                     {/* Image */}
@@ -256,32 +260,32 @@ const VehicleCarousel = () => {
                     </div>
 
                     {/* Content */}
-                    <div className="p-6">
+                    <div className="p-4 md:p-6">
                       {/* Selo Mamedio */}
                       <div className="flex items-center gap-2 mb-2">
-                        <ShieldCheck className="w-4 h-4 text-accent" />
+                        <ShieldCheck className="w-3 h-3 md:w-4 md:h-4 text-accent" />
                         <p className="text-xs text-accent font-semibold uppercase tracking-wider">
                           Mamedio Veículos
                         </p>
                       </div>
 
                       {/* Name & Price */}
-                      <h3 className="text-xl font-bold mb-2 group-hover:text-accent transition-colors">
+                      <h3 className="text-lg md:text-xl font-bold mb-2 group-hover:text-accent transition-colors">
                         {vehicle.name}
                       </h3>
-                      <p className="text-2xl font-bold text-accent mb-4">
+                      <p className="text-xl md:text-2xl font-bold text-accent mb-3 md:mb-4">
                         {formatPrice(vehicle.price)}
                       </p>
 
                       {/* Quick Details */}
-                      <div className="flex flex-wrap gap-3 text-sm text-muted-foreground mb-6">
-                        <span className="px-3 py-1 bg-card rounded-full border border-border">
+                      <div className="flex flex-wrap gap-2 md:gap-3 text-xs md:text-sm text-muted-foreground mb-4 md:mb-6">
+                        <span className="px-2 py-1 md:px-3 md:py-1 bg-card rounded-full border border-border">
                           {vehicle.year}
                         </span>
-                        <span className="px-3 py-1 bg-card rounded-full border border-border">
+                        <span className="px-2 py-1 md:px-3 md:py-1 bg-card rounded-full border border-border">
                           {vehicle.fuel}
                         </span>
-                        <span className="px-3 py-1 bg-card rounded-full border border-border">
+                        <span className="px-2 py-1 md:px-3 md:py-1 bg-card rounded-full border border-border">
                           {vehicle.transmission}
                         </span>
                       </div>
@@ -289,46 +293,46 @@ const VehicleCarousel = () => {
                       {/* CTA */}
                       <Button
                         variant="gold"
-                        className="w-full group/btn"
+                        className="w-full group/btn text-sm md:text-base"
                         onClick={() => handleVehicleClick(vehicle)}
                       >
                         Ver detalhes
-                        <ArrowRight className="w-4 h-4 transition-transform group-hover/btn:translate-x-1" />
+                        <ArrowRight className="w-3 h-3 md:w-4 md:h-4 transition-transform group-hover/btn:translate-x-1" />
                       </Button>
                     </div>
                   </div>
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="left-4 bg-background/80 backdrop-blur-sm border-accent/30 hover:bg-accent hover:text-accent-foreground" />
-            <CarouselNext className="right-4 bg-background/80 backdrop-blur-sm border-accent/30 hover:bg-accent hover:text-accent-foreground" />
+            <CarouselPrevious className="left-2 md:left-4 bg-background/80 backdrop-blur-sm border-accent/30 hover:bg-accent hover:text-accent-foreground h-8 w-8 md:h-10 md:w-10" />
+            <CarouselNext className="right-2 md:right-4 bg-background/80 backdrop-blur-sm border-accent/30 hover:bg-accent hover:text-accent-foreground h-8 w-8 md:h-10 md:w-10" />
           </Carousel>
         </div>
 
         {/* View All Button */}
-        <div className="text-center mt-12">
-          <Button variant="goldOutline" size="lg" className="group">
+        <div className="text-center mt-8 md:mt-12 px-4">
+          <Button variant="goldOutline" size="lg" className="group w-full sm:w-auto text-sm md:text-base">
             Ver todos os veículos
-            <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+            <ArrowRight className="w-4 h-4 md:w-5 md:h-5 transition-transform group-hover:translate-x-1" />
           </Button>
         </div>
       </div>
 
       {/* Vehicle Detail Dialog */}
       <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
-        <DialogContent className="max-w-5xl max-h-[90vh] overflow-y-auto">
+        <DialogContent className="max-w-5xl max-h-[90vh] overflow-y-auto p-4 md:p-6">
           {selectedVehicle && (
             <>
-              <DialogHeader>
-                <DialogTitle className="text-2xl md:text-3xl">
+              <DialogHeader className="mb-4 md:mb-6">
+                <DialogTitle className="text-xl sm:text-2xl md:text-3xl">
                   {selectedVehicle.name}
                 </DialogTitle>
-                <DialogDescription className="text-lg text-accent font-bold">
+                <DialogDescription className="text-base sm:text-lg text-accent font-bold">
                   {formatPrice(selectedVehicle.price)}
                 </DialogDescription>
               </DialogHeader>
 
-              <div className="space-y-6">
+              <div className="space-y-4 md:space-y-6">
                 {/* Image Carousel */}
                 <div className="relative">
                   <Carousel className="w-full">
@@ -345,35 +349,35 @@ const VehicleCarousel = () => {
                         </CarouselItem>
                       ))}
                     </CarouselContent>
-                    <CarouselPrevious />
-                    <CarouselNext />
+                    <CarouselPrevious className="left-2 md:left-4 h-8 w-8 md:h-10 md:w-10" />
+                    <CarouselNext className="right-2 md:right-4 h-8 w-8 md:h-10 md:w-10" />
                   </Carousel>
                 </div>
 
                 {/* Details Grid */}
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                  <div className="p-4 bg-card rounded-lg border border-border">
-                    <Calendar className="w-5 h-5 text-accent mb-2" />
-                    <p className="text-sm text-muted-foreground">Ano</p>
-                    <p className="text-lg font-bold">{selectedVehicle.year}</p>
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
+                  <div className="p-3 md:p-4 bg-card rounded-lg border border-border">
+                    <Calendar className="w-4 h-4 md:w-5 md:h-5 text-accent mb-2" />
+                    <p className="text-xs md:text-sm text-muted-foreground">Ano</p>
+                    <p className="text-base md:text-lg font-bold">{selectedVehicle.year}</p>
                   </div>
-                  <div className="p-4 bg-card rounded-lg border border-border">
-                    <Gauge className="w-5 h-5 text-accent mb-2" />
-                    <p className="text-sm text-muted-foreground">Quilometragem</p>
-                    <p className="text-lg font-bold">{selectedVehicle.km}</p>
+                  <div className="p-3 md:p-4 bg-card rounded-lg border border-border">
+                    <Gauge className="w-4 h-4 md:w-5 md:h-5 text-accent mb-2" />
+                    <p className="text-xs md:text-sm text-muted-foreground">Quilometragem</p>
+                    <p className="text-base md:text-lg font-bold">{selectedVehicle.km}</p>
                   </div>
                   {selectedVehicle.fuel && (
-                    <div className="p-4 bg-card rounded-lg border border-border">
-                      <MapPin className="w-5 h-5 text-accent mb-2" />
-                      <p className="text-sm text-muted-foreground">Combustível</p>
-                      <p className="text-lg font-bold">{selectedVehicle.fuel}</p>
+                    <div className="p-3 md:p-4 bg-card rounded-lg border border-border">
+                      <MapPin className="w-4 h-4 md:w-5 md:h-5 text-accent mb-2" />
+                      <p className="text-xs md:text-sm text-muted-foreground">Combustível</p>
+                      <p className="text-base md:text-lg font-bold">{selectedVehicle.fuel}</p>
                     </div>
                   )}
                   {selectedVehicle.transmission && (
-                    <div className="p-4 bg-card rounded-lg border border-border">
-                      <Gauge className="w-5 h-5 text-accent mb-2" />
-                      <p className="text-sm text-muted-foreground">Câmbio</p>
-                      <p className="text-lg font-bold">{selectedVehicle.transmission}</p>
+                    <div className="p-3 md:p-4 bg-card rounded-lg border border-border">
+                      <Gauge className="w-4 h-4 md:w-5 md:h-5 text-accent mb-2" />
+                      <p className="text-xs md:text-sm text-muted-foreground">Câmbio</p>
+                      <p className="text-base md:text-lg font-bold">{selectedVehicle.transmission}</p>
                     </div>
                   )}
                 </div>
@@ -381,33 +385,33 @@ const VehicleCarousel = () => {
                 {/* Description */}
                 {selectedVehicle.description && (
                   <div>
-                    <h4 className="text-lg font-bold mb-2">Descrição</h4>
-                    <p className="text-muted-foreground leading-relaxed">
+                    <h4 className="text-base md:text-lg font-bold mb-2">Descrição</h4>
+                    <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
                       {selectedVehicle.description}
                     </p>
                   </div>
                 )}
 
                 {/* Location */}
-                <div className="flex items-center gap-4 p-4 bg-card rounded-lg border border-border">
-                  <MapPin className="w-5 h-5 text-accent" />
-                  <div>
-                    <p className="text-sm text-muted-foreground">Localização</p>
-                    <p className="font-bold">{selectedVehicle.location}</p>
+                <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 md:gap-4 p-3 md:p-4 bg-card rounded-lg border border-border">
+                  <MapPin className="w-4 h-4 md:w-5 md:h-5 text-accent flex-shrink-0" />
+                  <div className="flex-1">
+                    <p className="text-xs md:text-sm text-muted-foreground">Localização</p>
+                    <p className="text-sm md:text-base font-bold">{selectedVehicle.location}</p>
                   </div>
-                  <div className="ml-auto flex items-center gap-2">
-                    <ShieldCheck className="w-5 h-5 text-accent" />
-                    <p className="text-sm font-semibold text-accent">Mamedio Veículos</p>
+                  <div className="flex items-center gap-2">
+                    <ShieldCheck className="w-4 h-4 md:w-5 md:h-5 text-accent" />
+                    <p className="text-xs md:text-sm font-semibold text-accent">Mamedio Veículos</p>
                   </div>
                 </div>
 
                 {/* Action Buttons */}
-                <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                  <Button variant="gold" className="flex-1 group">
+                <div className="flex flex-col gap-3 md:gap-4 pt-3 md:pt-4">
+                  <Button variant="gold" className="w-full group text-sm md:text-base">
                     Falar com especialista
                     <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                   </Button>
-                  <Button variant="goldOutline" className="flex-1 group">
+                  <Button variant="goldOutline" className="w-full group text-sm md:text-base">
                     Solicitar informações
                     <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                   </Button>
