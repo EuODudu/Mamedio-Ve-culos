@@ -55,28 +55,29 @@ const ValueProposition = () => {
   return (
     <section ref={sectionRef} className="section-padding bg-card relative">
       <div className="container-custom">
-        <div className="max-w-4xl mx-auto text-center mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+        <div className="max-w-4xl mx-auto text-center mb-8 md:mb-12 lg:mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-5 lg:mb-6">
             Muito além de{" "}
             <span className="text-gradient-gold">vender carros</span>.
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        {/* Grid - Mobile: 1 coluna, Desktop: 2 colunas */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 lg:gap-8 max-w-5xl mx-auto">
           {pillars.map((pillar, index) => {
             const Icon = pillar.icon;
             return (
               <div
                 key={pillar.title}
-                className="pillar-item opacity-0 bg-background rounded-xl p-8 border border-border hover:border-accent/50 transition-all duration-300 hover:shadow-card"
+                className="pillar-item opacity-0 bg-background rounded-lg md:rounded-xl p-5 md:p-6 lg:p-8 border border-border hover:border-accent/50 transition-all duration-300 hover:shadow-card"
               >
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center flex-shrink-0">
-                    <Icon className="w-6 h-6 text-accent" />
+                <div className="flex items-start gap-3 md:gap-4">
+                  <div className="w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 rounded-lg md:rounded-xl bg-accent/10 flex items-center justify-center flex-shrink-0">
+                    <Icon className="w-5 h-5 sm:w-5 sm:h-5 md:w-6 md:h-6 text-accent" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold mb-2">{pillar.title}</h3>
-                    <p className="text-muted-foreground leading-relaxed">
+                    <h3 className="text-lg sm:text-xl font-bold mb-1.5 md:mb-2">{pillar.title}</h3>
+                    <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
                       {pillar.description}
                     </p>
                   </div>

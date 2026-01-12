@@ -169,15 +169,15 @@ const VehicleCarousel = () => {
     <section id="vehicles" ref={sectionRef} className="section-padding bg-background relative overflow-hidden">
       <div className="container-custom">
         {/* Section Header */}
-        <div className="text-center mb-12 animate-fade-up">
-          <span className="inline-block text-accent font-semibold text-sm uppercase tracking-wider mb-4">
+        <div className="text-center mb-8 md:mb-10 lg:mb-12 animate-fade-up">
+          <span className="inline-block text-accent font-semibold text-xs md:text-sm uppercase tracking-wider mb-3 md:mb-4">
             Nossa Seleção
           </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 md:mb-4">
             Veículos{" "}
             <span className="text-gradient-gold">selecionados</span>
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+          <p className="text-muted-foreground text-sm sm:text-base md:text-lg max-w-2xl mx-auto">
             Qualidade sobre quantidade. Veículos curados especialmente para você.
           </p>
         </div>
@@ -259,41 +259,41 @@ const VehicleCarousel = () => {
                       </div>
                     </div>
 
-                    {/* Content */}
-                    <div className="p-6">
+                    {/* Content - Mobile: compacto */}
+                    <div className="p-4 md:p-5 lg:p-6">
                       {/* Selo Mamedio */}
-                      <div className="flex items-center gap-2 mb-2">
-                        <ShieldCheck className="w-4 h-4 text-accent" />
-                        <p className="text-xs text-accent font-semibold uppercase tracking-wider">
+                      <div className="flex items-center gap-1.5 md:gap-2 mb-1.5 md:mb-2">
+                        <ShieldCheck className="w-3.5 h-3.5 md:w-4 md:h-4 text-accent" />
+                        <p className="text-[10px] sm:text-xs text-accent font-semibold uppercase tracking-wider">
                           Mamedio Veículos
                         </p>
                       </div>
 
                       {/* Name & Price */}
-                      <h3 className="text-xl font-bold mb-2 group-hover:text-accent transition-colors">
+                      <h3 className="text-lg sm:text-xl font-bold mb-1.5 md:mb-2 group-hover:text-accent transition-colors">
                         {vehicle.name}
                       </h3>
-                      <p className="text-2xl font-bold text-accent mb-4">
+                      <p className="text-xl sm:text-2xl font-bold text-accent mb-3 md:mb-4">
                         {formatPrice(vehicle.price)}
                       </p>
 
                       {/* Quick Details */}
-                      <div className="flex flex-wrap gap-3 text-sm text-muted-foreground mb-6">
-                        <span className="px-3 py-1 bg-card rounded-full border border-border">
+                      <div className="flex flex-wrap gap-2 md:gap-3 text-xs sm:text-sm text-muted-foreground mb-4 md:mb-5 lg:mb-6">
+                        <span className="px-2 py-0.5 md:px-3 md:py-1 bg-card rounded-full border border-border">
                           {vehicle.year}
                         </span>
-                        <span className="px-3 py-1 bg-card rounded-full border border-border">
+                        <span className="px-2 py-0.5 md:px-3 md:py-1 bg-card rounded-full border border-border">
                           {vehicle.fuel}
                         </span>
-                        <span className="px-3 py-1 bg-card rounded-full border border-border">
+                        <span className="px-2 py-0.5 md:px-3 md:py-1 bg-card rounded-full border border-border">
                           {vehicle.transmission}
                         </span>
                       </div>
 
-                      {/* CTA */}
+                      {/* CTA - Mobile: grande e claro */}
                       <Button
                         variant="gold"
-                        className="w-full group/btn"
+                        className="w-full group/btn text-sm md:text-base py-2.5 md:py-3 min-h-[44px] md:min-h-[48px]"
                         onClick={() => handleVehicleClick(vehicle)}
                       >
                         Ver detalhes

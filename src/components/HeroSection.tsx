@@ -36,45 +36,45 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-hero group">
+    <section className="relative min-h-[85vh] md:min-h-screen flex items-center overflow-hidden bg-gradient-hero group">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0" ref={parallaxRef}>
         <img
           src={heroImage}
           alt="Veículos Mamedio"
-          className="w-full h-full object-cover object-center opacity-75 transition-all duration-500 ease-out group-hover:opacity-85 animate-image-glow"
+          className="w-full h-full object-cover object-center opacity-70 md:opacity-75 transition-all duration-500 ease-out group-hover:opacity-85 animate-image-glow"
           style={{
-            transform: `translateY(${scrollY}px) scale(1.2)`,
+            transform: `translateY(${scrollY}px) scale(1.1) md:scale(1.2)`,
             willChange: "transform",
           }}
         />
-        {/* Overlay com gradiente mais sutil para destacar a imagem */}
-        <div className="absolute inset-0 bg-gradient-to-r from-background/85 via-background/75 to-background/65" />
-        <div className="absolute inset-0 bg-gradient-to-t from-background/70 via-transparent to-background/50" />
+        {/* Overlay mais forte no mobile para melhor legibilidade */}
+        <div className="absolute inset-0 bg-gradient-to-r from-background/90 md:from-background/85 via-background/80 md:via-background/75 to-background/70 md:to-background/65" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background/80 md:from-background/70 via-transparent to-background/60 md:to-background/50" />
         {/* Efeito de brilho sutil */}
         <div className="absolute inset-0 bg-gradient-to-br from-accent/5 via-transparent to-transparent pointer-events-none" />
       </div>
 
-      {/* Content */}
-      <div className="container-custom relative z-10 pt-24 pb-12 md:pt-20 md:pb-20">
+      {/* Content - Mobile-first: compacto e direto */}
+      <div className="container-custom relative z-10 pt-20 pb-8 md:pt-24 md:pb-12 lg:pt-20 lg:pb-20">
         <div className="max-w-4xl">
-          {/* Logo Mamedio - Discreto */}
+          {/* Logo Mamedio - Mais compacto no mobile */}
           <div 
-            className={`mb-8 transition-all duration-700 ${
+            className={`mb-4 md:mb-6 lg:mb-8 transition-all duration-700 ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
           >
-            <div className="flex items-center gap-2 bg-accent/10 border border-accent/30 rounded-full px-4 py-2 w-fit">
-              <ShieldCheck className="w-5 h-5 text-accent" />
-              <span className="text-sm font-medium text-accent font-display">Mamedio Veículos</span>
+            <div className="flex items-center gap-1.5 md:gap-2 bg-accent/10 border border-accent/30 rounded-full px-3 py-1.5 md:px-4 md:py-2 w-fit">
+              <ShieldCheck className="w-4 h-4 md:w-5 md:h-5 text-accent" />
+              <span className="text-xs md:text-sm font-medium text-accent font-display">Mamedio Veículos</span>
               <span className="hidden sm:inline text-xs text-muted-foreground">•</span>
               <span className="hidden sm:inline text-xs text-muted-foreground">Procedência garantida</span>
             </div>
           </div>
 
-          {/* Main Headline */}
+          {/* Main Headline - Mobile: menor e mais direto */}
           <h1 
-            className={`text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-8 transition-all duration-700 delay-100 ${
+            className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-[1.15] md:leading-tight mb-4 md:mb-6 lg:mb-8 transition-all duration-700 delay-100 ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
           >
@@ -84,38 +84,38 @@ const HeroSection = () => {
             <span className="text-gradient-gold font-extrabold">confiável</span>.
           </h1>
 
-          {/* Subheadline */}
+          {/* Subheadline - Mobile: mais curto */}
           <p 
-            className={`text-lg md:text-xl text-foreground/90 mb-10 max-w-2xl transition-all duration-700 delay-200 ${
+            className={`text-sm sm:text-base md:text-lg lg:text-xl text-foreground/90 mb-6 md:mb-8 lg:mb-10 max-w-2xl transition-all duration-700 delay-200 ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
           >
             Veículos selecionados com procedência garantida e atendimento direto, do primeiro contato à entrega.
           </p>
 
-          {/* CTAs */}
+          {/* CTAs - Mobile: grande, claro, visível sem scroll */}
           <div 
-            className={`flex flex-col sm:flex-row gap-4 mb-10 transition-all duration-700 delay-300 ${
+            className={`flex flex-col gap-3 md:flex-row md:gap-4 mb-6 md:mb-8 lg:mb-10 transition-all duration-700 delay-300 ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
           >
             <Button
               variant="hero"
               size="xl"
-              className="group w-full sm:w-auto"
+              className="group w-full md:w-auto text-base md:text-lg px-6 py-5 md:px-8 md:py-6 min-h-[52px] md:min-h-[56px]"
               onClick={scrollToVehicles}
             >
               Encontrar meu próximo carro
               <ArrowDown className="w-5 h-5 transition-transform group-hover:translate-y-1" />
             </Button>
-            <Button variant="heroSecondary" size="xl" className="w-full sm:w-auto">
+            <Button variant="heroSecondary" size="xl" className="w-full md:w-auto text-base md:text-lg px-6 py-5 md:px-8 md:py-6 min-h-[52px] md:min-h-[56px]">
               Tirar dúvidas com um especialista
             </Button>
           </div>
 
-          {/* Micro CTA de rolagem */}
+          {/* Micro CTA de rolagem - Oculto no mobile para não competir */}
           <div 
-            className={`transition-all duration-700 delay-400 ${
+            className={`hidden md:block transition-all duration-700 delay-400 ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
           >
@@ -123,7 +123,7 @@ const HeroSection = () => {
               onClick={scrollToVehicles}
               className="flex flex-col items-center gap-2 text-foreground/70 hover:text-accent transition-colors group"
             >
-              <span className="text-xs sm:text-sm font-medium text-center">Veja algumas oportunidades selecionadas</span>
+              <span className="text-sm font-medium text-center">Veja algumas oportunidades selecionadas</span>
               <ArrowDown className="w-5 h-5 animate-bounce group-hover:text-accent" />
             </button>
           </div>
