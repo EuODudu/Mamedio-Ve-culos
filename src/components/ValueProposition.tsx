@@ -56,7 +56,7 @@ const ValueProposition = () => {
     <section ref={sectionRef} className="section-padding bg-card relative">
       <div className="container-custom">
         <div className="max-w-4xl mx-auto text-center mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Muito além de{" "}
             <span className="text-gradient-gold">vender carros</span>.
           </h2>

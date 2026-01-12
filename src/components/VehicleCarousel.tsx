@@ -173,7 +173,7 @@ const VehicleCarousel = () => {
           <span className="inline-block text-accent font-semibold text-sm uppercase tracking-wider mb-4">
             Nossa Seleção
           </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">
             Veículos{" "}
             <span className="text-gradient-gold">selecionados</span>
           </h2>
@@ -193,9 +193,9 @@ const VehicleCarousel = () => {
           >
             <CarouselContent className="-ml-2 md:-ml-4">
                   {vehiclesData.map((vehicle, index) => (
-                    <CarouselItem key={vehicle.id} className="pl-2 md:pl-4 basis-full sm:basis-1/2 lg:basis-1/3">
+                    <CarouselItem key={vehicle.id} className="pl-2 md:pl-4 basis-full md:basis-1/2 lg:basis-1/3">
                       <div
-                        className="group relative bg-card rounded-xl sm:rounded-2xl overflow-hidden border border-border hover:border-accent/50 transition-all duration-500 hover:shadow-elevated hover:-translate-y-2 transform-gpu h-full"
+                        className="group relative bg-card rounded-xl overflow-hidden border border-border hover:border-accent/50 transition-all duration-500 hover:shadow-elevated hover:-translate-y-2 transform-gpu h-full"
                     style={{
                       transformStyle: "preserve-3d",
                     }}
@@ -311,7 +311,7 @@ const VehicleCarousel = () => {
 
         {/* View All Button */}
         <div className="text-center mt-12">
-          <Button variant="goldOutline" size="lg" className="group w-full sm:w-auto">
+          <Button variant="goldOutline" size="lg" className="group w-full md:w-auto">
             Ver todos os veículos
             <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
           </Button>

@@ -18,7 +18,7 @@ const FinalCTA = () => {
     <section className="section-padding bg-card relative">
       <div className="container-custom">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Pronto para dar o{" "}
             <span className="text-gradient-gold">próximo passo</span>?
           </h2>
@@ -26,11 +26,11 @@ const FinalCTA = () => {
             Fale agora com a Mamedio Veículos e encontre o carro ideal.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col md:flex-row gap-4 justify-center">
             <Button
               variant="gold"
               size="xl"
-              className="group w-full sm:w-auto"
+              className="group w-full md:w-auto"
               onClick={handleContact}
             >
               <Phone className="w-5 h-5" />
@@ -39,7 +39,7 @@ const FinalCTA = () => {
             <Button
               variant="goldOutline"
               size="xl"
-              className="group w-full sm:w-auto"
+              className="group w-full md:w-auto"
               onClick={scrollToVehicles}
             >
               Ver veículos disponíveis
