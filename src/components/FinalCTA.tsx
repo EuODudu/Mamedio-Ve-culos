@@ -18,11 +18,11 @@ const FinalCTA = () => {
     <section className="section-padding bg-card relative">
       <div className="container-custom">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+          <h2 className="text-5xl font-bold mb-6">
             Pronto para dar o{" "}
             <span className="text-gradient-gold">próximo passo</span>?
           </h2>
-          <p className="text-lg md:text-xl text-muted-foreground mb-12 max-w-2xl mx-auto">
+          <p className="text-xl text-muted-foreground mb-12 max-w-2xl mx-auto">
             Fale agora com a Mamedio Veículos e encontre o carro ideal.
           </p>
 

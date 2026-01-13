@@ -56,7 +56,7 @@ const TrustBlock = () => {
     <section ref={sectionRef} className="section-padding bg-background relative">
       <div className="container-custom">
         <div className="max-w-4xl mx-auto text-center mb-12">
-          <p className="text-lg md:text-xl text-foreground/90 font-medium">
+          <p className="text-xl text-foreground/90 font-medium">
             Aqui você sabe exatamente o que está comprando.
           </p>
         </div>

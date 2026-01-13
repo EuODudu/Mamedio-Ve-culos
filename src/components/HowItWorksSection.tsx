@@ -30,7 +30,7 @@ const HowItWorksSection = () => {
           <span className="inline-block text-accent font-semibold text-sm uppercase tracking-wider mb-4">
             Como funciona
           </span>
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+          <h2 className="text-5xl font-bold mb-6">
             Simples, rápido e{" "}
             <span className="text-gradient-gold">sem complicação.</span>
           </h2>

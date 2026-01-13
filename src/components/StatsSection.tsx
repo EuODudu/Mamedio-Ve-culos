@@ -81,7 +81,7 @@ const StatsSection = () => {
           <span className="inline-block text-accent font-semibold text-sm uppercase tracking-wider mb-4">
             NÚMEROS QUE FALAM POR SI
           </span>
-          <h2 className="text-4xl md:text-5xl font-bold mb-12">
+          <h2 className="text-5xl font-bold mb-12">
             Resultados que{" "}
             <span className="text-gradient-gold">comprometem</span>
           </h2>
@@ -90,7 +90,7 @@ const StatsSection = () => {
           <div className="max-w-4xl mx-auto mb-8">
             <div className="relative inline-block w-full">
               <div className="absolute -inset-4 bg-accent/10 rounded-2xl blur-xl"></div>
-              <p className="relative text-3xl md:text-4xl font-bold text-foreground px-8 py-6 bg-card/50 backdrop-blur-sm rounded-xl border border-accent/20 text-center">
+              <p className="relative text-4xl font-bold text-foreground px-8 py-6 bg-card/50 backdrop-blur-sm rounded-xl border border-accent/20 text-center">
                 Não prometemos.{" "}
                 <span className="text-gradient-gold relative">
                   Comprovamos com fatos.
@@ -104,34 +104,34 @@ const StatsSection = () => {
           <div className="max-w-5xl mx-auto space-y-6">
             {/* Transparência em cada decisão */}
             <div className="text-left">
-              <h3 className="text-3xl md:text-3xl font-bold text-foreground mb-4 flex items-center gap-3">
+              <h3 className="text-3xl font-bold text-foreground mb-4 flex items-center gap-3">
                 <span className="w-1 h-12 bg-gradient-to-b from-accent to-accent/50 rounded-full flex-shrink-0"></span>
                 <span>Transparência em cada decisão</span>
               </h3>
-              <p className="text-xl md:text-xl text-muted-foreground leading-relaxed pl-5">
+              <p className="text-xl text-muted-foreground leading-relaxed pl-5">
                 Cada número representa uma <span className="text-foreground font-semibold">escolha bem-feita</span>, um cliente atendido com <span className="text-foreground font-semibold">clareza</span> e uma conquista entregue com <span className="text-foreground font-semibold">total segurança</span>.
               </p>
             </div>
 
             {/* Processo que gera confiança */}
             <div className="text-left">
-              <h3 className="text-3xl md:text-3xl font-bold text-foreground mb-4 flex items-center gap-3">
+              <h3 className="text-3xl font-bold text-foreground mb-4 flex items-center gap-3">
                 <span className="w-1 h-12 bg-gradient-to-b from-accent to-accent/50 rounded-full flex-shrink-0"></span>
                 <span>Processo que gera confiança</span>
               </h3>
-              <p className="text-xl md:text-xl text-muted-foreground leading-relaxed pl-5">
+              <p className="text-xl text-muted-foreground leading-relaxed pl-5">
                 Trabalhamos com <span className="text-foreground font-semibold">critérios rigorosos</span>, <span className="text-foreground font-semibold">processos bem definidos</span> e <span className="text-foreground font-semibold">controle em cada etapa</span>, para que você saiba exatamente o que está comprando.
               </p>
             </div>
 
             {/* Compromisso que vai além da venda */}
             <div className="text-left">
-              <h3 className="text-3xl md:text-3xl font-bold text-foreground mb-4 flex items-center gap-3">
+              <h3 className="text-3xl font-bold text-foreground mb-4 flex items-center gap-3">
                 <span className="w-1 h-12 bg-gradient-to-b from-accent to-accent/50 rounded-full flex-shrink-0"></span>
                 <span>Compromisso que vai além da venda</span>
               </h3>
               <div className="bg-background/50 backdrop-blur-sm rounded-xl p-6 border border-accent/20 pl-5">
-                <p className="text-xl md:text-xl text-foreground leading-relaxed">
+                <p className="text-xl text-foreground leading-relaxed">
                   Aqui, resultados não são apenas métricas. São reflexo de <span className="text-accent font-semibold">responsabilidade</span>, <span className="text-accent font-semibold">credibilidade</span> e <span className="text-accent font-semibold">respeito</span> em cada negociação realizada.
                 </p>
               </div>
@@ -141,7 +141,7 @@ const StatsSection = () => {
             <div className="max-w-4xl mx-auto pt-8">
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-r from-accent/20 via-accent/10 to-accent/20 rounded-2xl blur-2xl"></div>
-                <p className="relative text-2xl md:text-2xl font-bold text-foreground px-8 py-6 bg-card/80 backdrop-blur-sm rounded-xl border border-accent/30 text-center leading-relaxed">
+                <p className="relative text-2xl font-bold text-foreground px-8 py-6 bg-card/80 backdrop-blur-sm rounded-xl border border-accent/30 text-center leading-relaxed">
                   Porque quando o assunto é <span className="text-gradient-gold">conquistar o próximo carro</span>,
                   <br className="hidden md:block" />
                   nossos números assumem o <span className="text-gradient-gold">compromisso com você</span>.
@@ -164,7 +164,7 @@ const StatsSection = () => {
                   <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-accent/10 flex items-center justify-center group-hover:bg-accent/20 transition-colors">
                     <Icon className="w-6 h-6 text-accent" />
                   </div>
-                  <div className="text-4xl md:text-4xl font-bold text-accent mb-2">
+                  <div className="text-4xl font-bold text-accent mb-2">
                     {isVisible ? stat.value : "0"}
                   </div>
                   <p className="text-sm text-muted-foreground">{stat.label}</p>

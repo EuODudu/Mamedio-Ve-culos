@@ -69,7 +69,7 @@ const FeaturesSection = () => {
           <span className="inline-block text-accent font-semibold text-sm uppercase tracking-wider mb-4">
             Por que escolher
           </span>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          <h2 className="text-5xl font-bold mb-4">
             A{" "}
             <span className="text-gradient-gold">Mamedio Veículos</span>
           </h2>

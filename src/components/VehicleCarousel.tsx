@@ -173,7 +173,7 @@ const VehicleCarousel = () => {
           <span className="inline-block text-accent font-semibold text-sm uppercase tracking-wider mb-4">
             Nossa Seleção
           </span>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          <h2 className="text-5xl font-bold mb-4">
             Veículos{" "}
             <span className="text-gradient-gold">selecionados</span>
           </h2>

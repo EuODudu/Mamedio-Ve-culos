@@ -74,7 +74,7 @@ const HeroSection = () => {
 
           {/* Main Headline */}
           <h1 
-            className={`text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-8 transition-all duration-700 delay-100 ${
+            className={`text-5xl font-bold leading-tight mb-8 transition-all duration-700 delay-100 ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
           >
@@ -86,7 +86,7 @@ const HeroSection = () => {
 
           {/* Subheadline */}
           <p 
-            className={`text-lg md:text-xl text-foreground/90 mb-10 max-w-2xl transition-all duration-700 delay-200 ${
+            className={`text-xl text-foreground/90 mb-10 max-w-2xl transition-all duration-700 delay-200 ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
           >
